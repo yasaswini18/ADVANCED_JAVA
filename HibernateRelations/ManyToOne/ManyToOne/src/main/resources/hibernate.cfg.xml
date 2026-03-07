@@ -1,0 +1,18 @@
+<hibernate-configuration>
+<session-factory>
+<!--  Database Connection Settings  -->
+<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernate_mapping_database</property>
+<property name="hibernate.connection.username">root</property>
+<property name="hibernate.connection.password">Yash@123</property>
+<!--  MySQL Dialect  -->
+<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+<!--  Hibernate Behavior  -->
+<property name="hibernate.show_sql">true</property>
+<property name="hibernate.format_sql">true</property>
+<property name="hibernate.hbm2ddl.auto">update</property>
+<!--  Register Entity  -->
+<mapping class="com.hibernate.ManyToOne.Employee"/>
+<mapping class="com.hibernate.ManyToOne.Department"/>
+</session-factory>
+</hibernate-configuration>
